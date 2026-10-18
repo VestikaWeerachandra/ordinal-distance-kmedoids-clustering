@@ -1,0 +1,33 @@
+---
+title: "GDM2 distance matrix (Walesiak) for ordinal service ratings"
+output: html_document
+---
+
+This R step computes the GDM2 distance matrix with `clusterSim::dist.GDM` and
+exports it so the Python notebook can use it for K-Medoids clustering.
+
+Run order: (1) run notebook 01 up to the cell that writes
+`ordinal_features_for_gdm2.csv`, (2) knit this file, (3) go back to the notebook.
+
+```{r setup}
+if (!requireNamespace("clusterSim", quietly = TRUE)) install.packages("clusterSim")
+library(clusterSim)
+```
+
+```{r load}
+# Ordinal-encoded features (0 = Unacceptable ... 4 = Excellent), exported by the notebook.
+# Place the file in the same folder as this .Rmd (it is not included in the repo).
+x <- read.csv("ordinal_features_for_gdm2.csv")
+head(x)
+```
+
+```{r gdm2}
+gdm2 <- dist.GDM(x, method = "GDM2")
+gdm2_matrix <- as.matrix(gdm2)
+dim(gdm2_matrix)
+gdm2_matrix[1:5, 1:5]
+```
+
+```{r export}
+write.csv(gdm2_matrix, "gdm2_distance_matrix.csv", row.names = FALSE)
+```
