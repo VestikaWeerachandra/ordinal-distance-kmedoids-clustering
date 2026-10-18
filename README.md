@@ -5,7 +5,7 @@
 HNDDS final research project | National Innovation Centre (NIBM), Colombo | Supervisor: Mr. Ashan Arthanayake
 **Author:** Vestika Weerachandra
 
-!\[Silhouette comparison](results/figures/distance\_measure\_comparison\_silhouette.png)
+<img src="https://raw.githubusercontent.com/VestikaWeerachandra/ordinal-distance-kmedoids-clustering/main/results/figures/distance_measure_comparison_silhouette.png" width="600" alt="Silhouette comparison">
 
 ## Overview
 
@@ -30,7 +30,7 @@ I compared three measures on 3,230 guest reviews covering 161 hotels and 12 nati
 * **Segments differ significantly on all six features and Overall Rating** (Kruskal-Wallis, p < 0.001) with large effect sizes (epsilon-squared 0.44 to 0.65).
 * **Dining drives the split:** Quality Meals and Restaurant Service show the biggest gaps between segments (Top-Box gaps of 29.4 and 25.3 points). Check-in and staff friendliness separate the segments least.
 
-!\[Effect sizes](results/figures/kruskal\_wallis\_effect\_size\_ranked.png)
+<img src="https://raw.githubusercontent.com/VestikaWeerachandra/ordinal-distance-kmedoids-clustering/main/results/figures/kruskal_wallis_effect_size_ranked.png" width="600" alt="Effect sizes">
 
 ## Business takeaway
 
