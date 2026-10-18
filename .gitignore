@@ -1,0 +1,16 @@
+# Confidential client data - never commit
+data/*
+!data/README.md
+*.xlsx
+*.xls
+final_dataset.csv
+ordinal_features_for_gdm2.csv
+gdm2_distance_matrix.csv
+
+# Python / R / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.Rhistory
+.RData
+.Rproj.user/
+.DS_Store
